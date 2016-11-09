@@ -70,6 +70,10 @@ class BlackJackViewController: UIViewController {
      
      @IBAction func bet(_ sender: UIButton) {
      
+     while playing {
+        sender.isEnabled = false
+     }
+     
      let num = sender.currentTitle
      
      playerBet += Int(num!)! //Player clicks on "chips" to increment their total bet by the chip value
@@ -89,6 +93,8 @@ class BlackJackViewController: UIViewController {
      playerScoreLabel.text = String(player)
      //Update UIImages for Player and Dealer NOTE: Dealer has 1 card hidden
      
+     while playing {
+        sender.isEnabled = false
      }
      
      //HIT
