@@ -31,7 +31,7 @@ enum CardValue: String {
         get {
             switch self {
             case .Ace:
-                return 1
+                return 11
             case .Two:
                 return 2
             case .Three:

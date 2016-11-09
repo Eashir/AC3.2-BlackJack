@@ -11,12 +11,15 @@ import UIKit
 
 class BlackJackViewController: UIViewController {
   
+  @IBOutlet weak var dealButton: UIButton!
   var deckID: String?
   var drawEndPoint: String?
   var player = 0
-  var dealer: Int?
+  var dealer = 0
   var card: String?
-  
+  var playing = false
+  var playerMoney = 1000
+  var playerBet = 0
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -32,7 +35,6 @@ class BlackJackViewController: UIViewController {
         let newDeck = validDeck
         self.deckID = newDeck.deckID
         self.drawEndPoint = "https://deckofcardsapi.com/api/deck/\(self.deckID!)/draw/?count=1"
-        self.dealPlayer(endPoint: self.drawEndPoint!)
       }
     }
   }
@@ -45,7 +47,38 @@ class BlackJackViewController: UIViewController {
         self.player += dealtCard
       }
     }
+    
+    
   }
+    
+    func checkIfPlaying() {
+        while playing {
+            dealPlayer(endPoint: self.drawEndPoint!)
+            if player == 21 || dealer == 21 {
+                playing = false
+                //Label for game status will say "YOU WIN!" or "YOU LOSE!"
+            }
+        }
+    }
+    
+    
+
+    /*
+     //PLACING BET: This is Bet button action function
+     @IBAction func bet(_ sender: UIButton) {
+     
+     let num = sender.currentTitle
+     
+     playerBet Int(num!)! //Player clicks on "chips" to increment their total bet by the chip value
+     
+     playerMoney -= Int(num!)! //Each bet takes away from playerMoney
+     
+     playerBetLabel.text? = String(playerBet) //This updates the label to show the Player how much $$ they've put at stake thus far
+     }
+     */
+    
+    
+
   
   // MARK: - Navigation
   
