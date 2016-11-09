@@ -14,7 +14,7 @@ class BlackJackViewController: UIViewController {
   var deckID: String?
   var drawEndPoint: String?
   var player = 0
-  var dealer: Int?
+  var dealer = 0
   var card: String?
   
   
@@ -32,7 +32,6 @@ class BlackJackViewController: UIViewController {
         let newDeck = validDeck
         self.deckID = newDeck.deckID
         self.drawEndPoint = "https://deckofcardsapi.com/api/deck/\(self.deckID!)/draw/?count=1"
-        self.dealPlayer(endPoint: self.drawEndPoint!)
       }
     }
   }
