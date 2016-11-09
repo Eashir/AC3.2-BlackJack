@@ -22,8 +22,7 @@ class BlackJackViewController: UIViewController {
   var playing = false
   var playerMoney = 1000
     
-    var playerMoneyValues = [Int]()
-
+ 
     
   var playerBet = 0
   
@@ -82,23 +81,23 @@ class BlackJackViewController: UIViewController {
         }
         
     
-        playerMoneyValues.append(playerMoney)
+        
         
         let amountBet = sender.currentTitle
         
         let amountBetUnwrapped = Int(amountBet!)!
         
-     
+        let betTotal = playerBet + amountBetUnwrapped
+        
+        if betTotal > -1 && betTotal <= 500 {
+            playerBet += amountBetUnwrapped
         
         let moneyTotal = playerMoney - amountBetUnwrapped
         if moneyTotal > -1 {
             playerMoney -= amountBetUnwrapped
         }
 
-        let betTotal = playerBet + amountBetUnwrapped
-            
-        if betTotal > -1 && betTotal <= playerMoneyValues[0] {
-            playerBet += amountBetUnwrapped
+     
         }
         
        
