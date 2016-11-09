@@ -21,6 +21,10 @@ class BlackJackViewController: UIViewController {
   var card: String?
   var playing = false
   var playerMoney = 1000
+    
+    var playerMoneyValues = [Int]()
+
+    
   var playerBet = 0
   
   override func viewDidLoad() {
@@ -72,25 +76,33 @@ class BlackJackViewController: UIViewController {
     //Made bet button action from one button, then option-clicked dragged to duplicate the rest of the bet buttons
     
     @IBAction func Bet(_ sender: UIButton) {
-       
+        
         while playing {
             sender.isEnabled = false
         }
         
-      
+    
+        playerMoneyValues.append(playerMoney)
         
         let amountBet = sender.currentTitle
         
         let amountBetUnwrapped = Int(amountBet!)!
-        let betTotal = playerBet + amountBetUnwrapped
-        if betTotal > -1 {
-            playerBet += amountBetUnwrapped
-        }
+        
+     
         
         let moneyTotal = playerMoney - amountBetUnwrapped
         if moneyTotal > -1 {
             playerMoney -= amountBetUnwrapped
         }
+
+        let betTotal = playerBet + amountBetUnwrapped
+            
+        if betTotal > -1 && betTotal <= playerMoneyValues[0] {
+            playerBet += amountBetUnwrapped
+        }
+        
+       
+        
         
         playerBetLabel.text? = String(playerBet)
         playerMoneyLabel.text? = String(playerMoney)
