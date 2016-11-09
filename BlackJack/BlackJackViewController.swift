@@ -11,6 +11,8 @@ import UIKit
 
 class BlackJackViewController: UIViewController {
   
+  @IBOutlet weak var playerMoneyLabel: UILabel!
+  @IBOutlet weak var playerBetLabel: UILabel!
   @IBOutlet weak var dealButton: UIButton!
   var deckID: String?
   var drawEndPoint: String?
@@ -23,7 +25,7 @@ class BlackJackViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    getDeck(endPoint: "d")
+    getDeck(endPoint: "https://deckofcardsapi.com/api/deck/new/shuffle/?deck_count=6")
     
     
   }
@@ -51,6 +53,9 @@ class BlackJackViewController: UIViewController {
     
     
   }
+    func disableBet() {
+        
+    }
     
     func checkIfPlaying() {
         while playing {
@@ -64,6 +69,36 @@ class BlackJackViewController: UIViewController {
             
         }
     }
+    //Made bet button action from one button, then option-clicked dragged to duplicate the rest of the bet buttons
+    
+    @IBAction func Bet(_ sender: UIButton) {
+       
+        while playing {
+            sender.isEnabled = false
+        }
+        
+      
+        
+        let amountBet = sender.currentTitle
+        
+        let amountBetUnwrapped = Int(amountBet!)!
+        let betTotal = playerBet + amountBetUnwrapped
+        if betTotal > -1 {
+            playerBet += amountBetUnwrapped
+        }
+        
+        let moneyTotal = playerMoney - amountBetUnwrapped
+        if moneyTotal > -1 {
+            playerMoney -= amountBetUnwrapped
+        }
+        
+        playerBetLabel.text? = String(playerBet)
+        playerMoneyLabel.text? = String(playerMoney)
+        
+        
+        
+    }
+   
     
     /*
      //PLACING BET: This is Bet button action function
