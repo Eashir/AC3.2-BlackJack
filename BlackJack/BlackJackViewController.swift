@@ -10,52 +10,65 @@ import UIKit
 
 
 class BlackJackViewController: UIViewController {
-  
-  @IBOutlet weak var dealButton: UIButton!
-  var deckID: String?
-  var drawEndPoint: String?
-  var player = 0
-  var dealer = 0
-  var card: String?
-  var playing = false
-  var playerMoney = 1000
-  var playerBet = 0
-  
-  override func viewDidLoad() {
-    super.viewDidLoad()
-    getDeck(endPoint: "d")
     
+    @IBOutlet weak var dealButton: UIButton!
+    var deckID: String?
+    var drawEndPoint: String?
+    var player = 0
+    var dealer = 0
+    var card: String?
+    var playing = false
+    var playerMoney = 1000
+    var playerBet = 0
     
-  }
-  
-  func getDeck(endPoint: String) {
-    APIRequestManager.manager.getData(endPoint: "\(endPoint)") { (data: Data?) in
-      if  let validData = data,
-        let validDeck = Deck.deck(from: validData) {
-        let newDeck = validDeck
-        self.deckID = newDeck.deckID
-        self.drawEndPoint = "https://deckofcardsapi.com/api/deck/\(self.deckID!)/draw/?count=1"
-      }
-    }
-  }
-  
-  func dealPlayer(endPoint: String) {
-    APIRequestManager.manager.getData(endPoint: "\(endPoint)") { (data: Data?) in
-      if  let validData = data,
-        let validCard = Card.cards(from: validData) {
-        let dealtCard = validCard.value
-        self.player += dealtCard
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        getDeck(endPoint: "https://deckofcardsapi.com/api/deck/new/shuffle/?deck_count=6")
         
-      }
+        
     }
     
+    func getDeck(endPoint: String) {
+        APIRequestManager.manager.getData(endPoint: "\(endPoint)") { (data: Data?) in
+            if  let validData = data,
+                let validDeck = Deck.deck(from: validData) {
+                let newDeck = validDeck
+                self.deckID = newDeck.deckID
+                self.drawEndPoint = "https://deckofcardsapi.com/api/deck/\(self.deckID!)/draw/?count=1"
+            }
+        }
+    }
     
-  }
+    func dealPlayer(endPoint: String) {
+        APIRequestManager.manager.getData(endPoint: "\(endPoint)") { (data: Data?) in
+            if  let validData = data,
+                let validCard = Card.cards(from: validData) {
+                let dealtCard = validCard.value
+                self.player += dealtCard
+                
+            }
+        }
+    }
+    
+    func dealDealer(endPoint: String) {
+        APIRequestManager.manager.getData(endPoint: "\(endPoint)") { (data: Data?) in
+            if  let validData = data,
+                let validCard = Card.cards(from: validData) {
+                let dealtCard = validCard.value
+                self.dealer += dealtCard
+                
+            }
+        }
+    }
+   
+
     
     func checkIfPlaying() {
         while playing {
             dealPlayer(endPoint: self.drawEndPoint!)
-            //dealDealer
+            dealPlayer(endPoint: self.drawEndPoint!)
+            dealDealer(endPoint: self.drawEndPoint!)
+            dealDealer(endPoint: self.drawEndPoint!)
             if player == 21 || dealer == 21 {
                 playing = false
                 //Label for game status will say "BLACKJACK!" and "YOU WIN!" or "YOU LOSE!"
@@ -69,6 +82,10 @@ class BlackJackViewController: UIViewController {
      //PLACING BET: This is Bet button action function
      
      @IBAction func bet(_ sender: UIButton) {
+        while playing {
+            sender.isEnabled = false //Disables the button after one click
+        }
+
      
      let num = sender.currentTitle
      
@@ -79,8 +96,8 @@ class BlackJackViewController: UIViewController {
      playerBetLabel.text? = String(playerBet) //This updates the label to show the Player how much $$ they've put at stake thus far
      }
      
-    
-    //DEAL
+     
+     //DEAL
      
      @IBAction func deal(_ sender: UIButton) {
      
@@ -96,11 +113,11 @@ class BlackJackViewController: UIViewController {
      @IBAction func hit(_ sender: UIButton) {
      
      checkIfPlaying() //for a hit we dont deal the Dealer unless Player loses
-     //Updates UIImage for player only 
+     //Updates UIImage for player only
      playerScoreLabel.text = String(player)
      guard player < 22 else {
-        //Dealer gets dealt, hidden card revealed, dealer score updated, and player loses
-        playing = false
+     //Dealer gets dealt, hidden card revealed, dealer score updated, and player loses
+     playing = false
      }
      //Update UIImage for hidden card for dealer
      dealerScoreLabel.text = String(dealer)
@@ -120,10 +137,10 @@ class BlackJackViewController: UIViewController {
      //DOUBLE
      
      @IBAction func double(_ sender: UIButton) {
-        if playerMoney >= playerBet {
-            playerBet *= 2
-            //Player has to stand
-        }
+     if playerMoney >= playerBet {
+     playerBet *= 2
+     //Player has to stand
+     }
      }
      
      //SPLIT
@@ -135,15 +152,15 @@ class BlackJackViewController: UIViewController {
      
      
      */
-
-  
-  // MARK: - Navigation
-  
-  
-  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     
     
-  }
-  
-  
+    // MARK: - Navigation
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        
+    }
+    
+    
 }
