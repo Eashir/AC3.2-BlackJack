@@ -54,15 +54,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="YDM-Fg-po2" userLabel="Betting">
-                                <frame key="frameInset" minX="314" minY="345" width="109" height="20"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="YDM-Fg-po2" userLabel="Betting"/>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="2w5-hJ-Sn0" userLabel="Commands">
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Oqd-Qd-cQT" userLabel="Top Row">
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZTO-2X-BUC">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZTO-2X-BUC" customClass="customButton" customModule="BlackJack" customModuleProvider="target">
                                                 <color key="backgroundColor" red="0.21157208089999999" green="0.75629079340000005" blue="0.26483327150000002" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="70" id="3aj-d8-g6a"/>
@@ -76,7 +73,7 @@
                                                     <color key="titleShadowColor" red="0.098039215690000001" green="0.33725490200000002" blue="0.1058823529" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UZU-VL-FfX">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UZU-VL-FfX" customClass="customButton" customModule="BlackJack" customModuleProvider="target">
                                                 <color key="backgroundColor" red="0.21157208089999999" green="0.75629079340000005" blue="0.26483327150000002" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="45" id="CKm-CO-aBu"/>
@@ -94,7 +91,7 @@
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="8sm-za-PFX" userLabel="Bottom Row">
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dhd-h2-bbn">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dhd-h2-bbn" customClass="customButton" customModule="BlackJack" customModuleProvider="target">
                                                 <color key="backgroundColor" red="0.21157208089999999" green="0.75629079340000005" blue="0.26483327150000002" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="70" id="hWn-GP-BLb"/>
@@ -108,7 +105,7 @@
                                                     <color key="titleShadowColor" red="0.098039215690000001" green="0.33725490200000002" blue="0.1058823529" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xxr-yv-9ix">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xxr-yv-9ix" customClass="customButton" customModule="BlackJack" customModuleProvider="target">
                                                 <color key="backgroundColor" red="0.21157208089999999" green="0.75629079340000005" blue="0.26483327150000002" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="70" id="bUx-4F-J1t"/>
@@ -144,7 +141,7 @@
                                     </imageView>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KcJ-gV-cdF">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KcJ-gV-cdF" customClass="customButton" customModule="BlackJack" customModuleProvider="target">
                                 <color key="backgroundColor" red="0.21157208089999999" green="0.75629079340000005" blue="0.26483327150000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="70" id="hAl-pH-sLz"/>
@@ -158,14 +155,11 @@
                                     <color key="titleShadowColor" red="0.098039215690000001" green="0.33725490200000002" blue="0.1058823529" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ew5-u5-Q4d" userLabel="Chip buttons">
-                                <frame key="frameInset" minX="279" minY="279" width="180" height="70"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ew5-u5-Q4d" userLabel="Chip buttons">
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" distribution="equalSpacing" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Fce-1X-A4s" userLabel="Top row">
-                                        <frame key="frameInset" width="180" height="30"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Fce-1X-A4s" userLabel="Top row">
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T5f-xB-WRA">
-                                                <frame key="frameInset" width="50" height="30"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T5f-xB-WRA" customClass="customButton" customModule="BlackJack" customModuleProvider="target">
                                                 <color key="backgroundColor" red="0.21157208089999999" green="0.75629079340000005" blue="0.26483327150000002" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="50" id="AIN-K9-w6n"/>
@@ -179,8 +173,7 @@
                                                     <color key="titleShadowColor" red="0.098039215690000001" green="0.33725490200000002" blue="0.1058823529" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="din-33-lLk">
-                                                <frame key="frameInset" minX="65" width="50" height="30"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="din-33-lLk" customClass="customButton" customModule="BlackJack" customModuleProvider="target">
                                                 <color key="backgroundColor" red="0.21157208089999999" green="0.75629079340000005" blue="0.26483327150000002" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="50" id="Kqm-Zw-wv7"/>
@@ -194,8 +187,7 @@
                                                     <color key="titleShadowColor" red="0.098039215690000001" green="0.33725490200000002" blue="0.1058823529" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2fA-mV-qNR">
-                                                <frame key="frameInset" minX="130" width="50" height="30"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2fA-mV-qNR" customClass="customButton" customModule="BlackJack" customModuleProvider="target">
                                                 <color key="backgroundColor" red="0.21157208089999999" green="0.75629079340000005" blue="0.26483327150000002" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="MZZ-dg-sA0"/>
@@ -211,11 +203,9 @@
                                             </button>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="IM5-cF-if1" userLabel="Bottom row">
-                                        <frame key="frameInset" minY="40" width="180" height="30"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="IM5-cF-if1" userLabel="Bottom row">
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ufz-aa-6sX">
-                                                <frame key="frameInset" width="50" height="30"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ufz-aa-6sX" customClass="customButton" customModule="BlackJack" customModuleProvider="target">
                                                 <color key="backgroundColor" red="0.21157208089999999" green="0.75629079340000005" blue="0.26483327150000002" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="50" id="4Gh-XE-duT"/>
@@ -229,8 +219,7 @@
                                                     <color key="titleShadowColor" red="0.098039215690000001" green="0.33725490200000002" blue="0.1058823529" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VB8-lp-IHL">
-                                                <frame key="frameInset" minX="65" width="50" height="30"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VB8-lp-IHL" customClass="customButton" customModule="BlackJack" customModuleProvider="target">
                                                 <color key="backgroundColor" red="0.21157208089999999" green="0.75629079340000005" blue="0.26483327150000002" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="50" id="NbA-dH-C2s"/>
@@ -244,8 +233,7 @@
                                                     <color key="titleShadowColor" red="0.098039215690000001" green="0.33725490200000002" blue="0.1058823529" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="feh-JW-vTv">
-                                                <frame key="frameInset" minX="130" width="50" height="30"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="feh-JW-vTv" customClass="customButton" customModule="BlackJack" customModuleProvider="target">
                                                 <color key="backgroundColor" red="0.21157208089999999" green="0.75629079340000005" blue="0.26483327150000002" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="50" id="LwX-VY-bDB"/>
@@ -373,7 +361,7 @@
                                     <constraint firstAttribute="width" constant="75" id="Q8G-Dw-KJH"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CXh-kr-NCh">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CXh-kr-NCh" customClass="customButton" customModule="BlackJack" customModuleProvider="target">
                                 <color key="backgroundColor" red="0.21157208089999999" green="0.75629079340000005" blue="0.26483327150000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="llg-ms-eTA"/>
@@ -467,11 +455,11 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fsO-Kj-4zk">
-                                <frame key="frameInset" minX="20" minY="335" width="46" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fsO-Kj-4zk" customClass="customButton" customModule="BlackJack" customModuleProvider="target">
+                                <frame key="frameInset" minX="166" minY="191" width="30" height="15"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.21157208089999999" green="0.75629079340000005" blue="0.26483327150000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="8"/>
                                 <state key="normal" title="RULES">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -492,16 +480,18 @@
                             <constraint firstItem="V2a-QZ-OA0" firstAttribute="bottom" secondItem="9XA-PF-Vwp" secondAttribute="bottom" id="8x1-gO-9zv"/>
                             <constraint firstItem="9XA-PF-Vwp" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="AC7-sZ-eaY"/>
                             <constraint firstItem="Hcr-V0-pwb" firstAttribute="bottom" secondItem="che-f7-JA0" secondAttribute="bottom" id="B56-yo-OJO"/>
-                            <constraint firstItem="CXh-kr-NCh" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Bwy-W1-0KC"/>
+                            <constraint firstItem="CXh-kr-NCh" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="Bwy-W1-0KC"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ew5-u5-Q4d" secondAttribute="bottom" constant="26" id="CMO-SE-3Je"/>
                             <constraint firstItem="ehO-Ti-91q" firstAttribute="leading" secondItem="avI-AL-mRz" secondAttribute="leading" id="DUU-rK-f7n"/>
                             <constraint firstItem="cjR-eO-Yb8" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="21" id="Dug-XY-TuD"/>
                             <constraint firstAttribute="trailingMargin" secondItem="cjR-eO-Yb8" secondAttribute="trailing" constant="415" id="EFJ-rb-7IP"/>
+                            <constraint firstItem="ew5-u5-Q4d" firstAttribute="centerX" secondItem="YDM-Fg-po2" secondAttribute="centerX" id="FDl-Fz-EMF"/>
                             <constraint firstItem="Te0-2V-9th" firstAttribute="bottom" secondItem="9XA-PF-Vwp" secondAttribute="bottom" id="GYh-wh-FlC"/>
                             <constraint firstItem="9XA-PF-Vwp" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="21" id="HAq-rH-0ka"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="vwh-5W-rnY" secondAttribute="bottom" constant="10" id="HEF-Ub-zBD"/>
                             <constraint firstItem="WcE-gW-MBr" firstAttribute="top" secondItem="Vb5-jb-bxJ" secondAttribute="bottom" constant="37" id="Ifm-h9-bAV"/>
                             <constraint firstItem="KcJ-gV-cdF" firstAttribute="leading" secondItem="2w5-hJ-Sn0" secondAttribute="leading" id="J9f-aa-gb9"/>
+                            <constraint firstItem="YDM-Fg-po2" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="345" id="JpY-73-z5a"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="mTX-HD-O3z" secondAttribute="bottom" constant="158" id="KMk-a2-kAx"/>
                             <constraint firstAttribute="trailingMargin" secondItem="KcJ-gV-cdF" secondAttribute="trailing" constant="123" id="Kxf-jR-0B0"/>
                             <constraint firstItem="cjR-eO-Yb8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="137" id="Ll8-Zi-VmK"/>
@@ -511,11 +501,13 @@
                             <constraint firstItem="xat-Sx-vBk" firstAttribute="bottom" secondItem="9XA-PF-Vwp" secondAttribute="bottom" id="O7D-xj-LMc"/>
                             <constraint firstAttribute="trailingMargin" secondItem="xat-Sx-vBk" secondAttribute="trailing" constant="497" id="QMs-6N-BwN"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="WcE-gW-MBr" secondAttribute="bottom" constant="10" id="SJz-iE-7Xe"/>
+                            <constraint firstItem="ew5-u5-Q4d" firstAttribute="centerX" secondItem="mTX-HD-O3z" secondAttribute="centerX" id="SXp-ns-MgN"/>
                             <constraint firstItem="Hcr-V0-pwb" firstAttribute="trailing" secondItem="xat-Sx-vBk" secondAttribute="trailing" id="TZJ-ME-f0H"/>
                             <constraint firstItem="WcE-gW-MBr" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="109" id="U9W-KU-sQO"/>
                             <constraint firstItem="xat-Sx-vBk" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="55" id="VZ1-og-JVB"/>
                             <constraint firstItem="cWU-Ck-24r" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="217" id="W7U-33-S9L"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="2w5-hJ-Sn0" secondAttribute="bottom" constant="8" id="Wbz-tj-hq0"/>
+                            <constraint firstItem="2w5-hJ-Sn0" firstAttribute="leading" secondItem="YDM-Fg-po2" secondAttribute="trailing" constant="82" id="Wjq-mm-UeC"/>
                             <constraint firstItem="Hcr-V0-pwb" firstAttribute="bottom" secondItem="avI-AL-mRz" secondAttribute="bottom" id="X8R-6j-cSZ"/>
                             <constraint firstItem="Hcr-V0-pwb" firstAttribute="bottom" secondItem="WcE-gW-MBr" secondAttribute="bottom" id="Y2h-pI-G82"/>
                             <constraint firstItem="vwh-5W-rnY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="137" id="YOP-on-GB0"/>
@@ -555,6 +547,7 @@
                             <constraint firstAttribute="trailingMargin" secondItem="Te0-2V-9th" secondAttribute="trailing" constant="526" id="vE1-6S-Xje"/>
                             <constraint firstItem="V2a-QZ-OA0" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="21" id="w7Y-yo-JA5"/>
                             <constraint firstItem="KcJ-gV-cdF" firstAttribute="trailing" secondItem="ZTO-2X-BUC" secondAttribute="trailing" id="x55-Hq-ydP"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="YDM-Fg-po2" secondAttribute="bottom" constant="10" id="xvq-VJ-6NM"/>
                             <constraint firstItem="Vb5-jb-bxJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="109" id="y9X-wQ-Jjk"/>
                             <constraint firstItem="cjR-eO-Yb8" firstAttribute="bottom" secondItem="9XA-PF-Vwp" secondAttribute="bottom" id="yAz-6w-7Ce"/>
                             <constraint firstItem="CXh-kr-NCh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="313" id="zC5-yU-2f0"/>
