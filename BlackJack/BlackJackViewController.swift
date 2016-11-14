@@ -11,6 +11,8 @@ import UIKit
 
 class BlackJackViewController: UIViewController {
   
+  @IBOutlet weak var playerCardTwo: UIImageView!
+  @IBOutlet weak var playerCard: UIImageView!
   @IBOutlet weak var playerMoneyLabel: UILabel!
   @IBOutlet weak var playerBetLabel: UILabel!
   @IBOutlet weak var dealButton: UIButton!
@@ -21,7 +23,8 @@ class BlackJackViewController: UIViewController {
   var card: String?
   var playing = false
   var playerMoney = 1000
-    
+  var cardImageURL = String()
+  
  
     
   var playerBet = 0
@@ -50,12 +53,30 @@ class BlackJackViewController: UIViewController {
         let validCard = Card.cards(from: validData) {
         let dealtCard = validCard.value
         self.player += dealtCard
-        
+        self.cardImageURL = validCard.image
       }
     }
     
+    APIRequestManager.manager.downloadImage(urlString: cardImageURL) { (data: Data?) in
+        if  let validData = data,
+            let validImage = UIImage(data: validData) {
+            DispatchQueue.main.async {
+                self.playerCard?.image = validImage
+              
+                self.viewDidLoad()
+            }
+        }
+    }
+    
+    
     
   }
+    
+    func getCard() {
+        
+    }
+    
+   
     func disableBet() {
         
     }
@@ -76,12 +97,9 @@ class BlackJackViewController: UIViewController {
     
     @IBAction func Bet(_ sender: UIButton) {
         
-        while playing {
-            sender.isEnabled = false
-        }
-        
-    
-        
+//        while playing {
+//            sender.isEnabled = false
+//        }
         
         let amountBet = sender.currentTitle
         
@@ -90,7 +108,7 @@ class BlackJackViewController: UIViewController {
         let betTotal = playerBet + amountBetUnwrapped
         
         if betTotal > -1 && betTotal <= 500 {
-            playerBet += amountBetUnwrapped
+            playerBet += amountBetUnwrapped;
         
         let moneyTotal = playerMoney - amountBetUnwrapped
         if moneyTotal > -1 {
@@ -100,9 +118,6 @@ class BlackJackViewController: UIViewController {
      
         }
         
-       
-        
-        
         playerBetLabel.text? = String(playerBet)
         playerMoneyLabel.text? = String(playerMoney)
         
@@ -110,6 +125,11 @@ class BlackJackViewController: UIViewController {
         
     }
    
+    @IBAction func Deal(_ sender: UIButton) {
+        playing = true
+        dealPlayer(endPoint: drawEndPoint!)
+
+    }
     
     /*
      //PLACING BET: This is Bet button action function
@@ -191,11 +211,11 @@ class BlackJackViewController: UIViewController {
   
   // MARK: - Navigation
   
-  
+  /*
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     
     
   }
-  
+  */
   
 }

@@ -55,7 +55,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="mTX-HD-O3z">
-                                <frame key="frameInset" minX="308" minY="49" width="121" height="84"/>
+                                <frame key="frameInset" minX="308" minY="49" width="121" height="83"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="iGB-hG-DMS" userLabel="Money">
                                         <subviews>
@@ -103,9 +103,8 @@
                                     <segue destination="Wnj-qu-8Kz" kind="show" id="kG9-dk-PnI"/>
                                 </connections>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="YDM-Fg-po2" userLabel="Betting">
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="YDM-Fg-po2" userLabel="Betting">
                                 <frame key="frameInset" minX="314" minY="345" width="109" height="20"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="2w5-hJ-Sn0" userLabel="Commands">
                                 <frame key="frameInset" minX="542" minY="283" width="165" height="105"/>
@@ -206,6 +205,9 @@
                                 <state key="normal" title="Deal!">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="Deal:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4EF-tH-xU5"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="jqc-XV-sTu" userLabel="Dealer Score">
                                 <frame key="frameInset" minX="564" minY="161" width="19" height="21"/>
@@ -222,9 +224,8 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Dea-no-gnA" userLabel="Player Score">
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Dea-no-gnA" userLabel="Player Score">
                                 <frame key="frameInset" minX="41" minY="321" width="115" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Your Hand:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IC3-od-G5l">
                                         <frame key="frameInset" width="91" height="21"/>
@@ -241,33 +242,31 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.022394469895287927" green="0.022394469895287927" blue="0.022394469895287927" alpha="1" colorSpace="calibratedRGB"/>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e5A-eM-dy0">
-                                <frame key="frameInset" minX="200" minY="279" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e5A-eM-dy0">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="46" id="U6K-hz-Los"/>
+                                </constraints>
                                 <state key="normal" title="1"/>
                                 <connections>
                                     <action selector="Bet:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JPv-EV-HT0"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rbM-0D-JOu">
-                                <frame key="frameInset" minX="263" minY="279" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rbM-0D-JOu">
                                 <state key="normal" title="5"/>
                                 <connections>
                                     <action selector="Bet:" destination="BYZ-38-t0r" eventType="touchUpInside" id="U9S-7E-eyp"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zcz-nw-ZVE">
-                                <frame key="frameInset" minX="345" minY="279" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zcz-nw-ZVE">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="46" id="UXe-GH-1uR"/>
+                                </constraints>
                                 <state key="normal" title="10"/>
                                 <connections>
                                     <action selector="Bet:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fiL-te-tT7"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hNY-v8-BmW">
-                                <frame key="frameInset" minX="200" minY="316" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hNY-v8-BmW">
                                 <state key="normal" title="25"/>
                                 <connections>
                                     <action selector="Bet:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oM7-tq-XTy"/>
@@ -281,36 +280,66 @@
                                     <action selector="Bet:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1gl-4l-2rR"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iY5-fE-FsY">
-                                <frame key="frameInset" minX="345" minY="312" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iY5-fE-FsY">
                                 <state key="normal" title="500"/>
                                 <connections>
                                     <action selector="Bet:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qcv-S6-Ecd"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Go8-Im-GRJ">
+                                <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="ZTW-TV-pDh"/>
+                                    <constraint firstAttribute="width" constant="78" id="vnf-9a-05T"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RK3-lg-AnG">
+                                <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="hNY-v8-BmW" firstAttribute="top" secondItem="e5A-eM-dy0" secondAttribute="bottom" constant="7" id="1bs-XG-x8A"/>
+                            <constraint firstItem="RK3-lg-AnG" firstAttribute="top" secondItem="Go8-Im-GRJ" secondAttribute="top" id="2K7-IA-hL8"/>
+                            <constraint firstItem="Go8-Im-GRJ" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="175" id="4QN-pK-hkQ"/>
+                            <constraint firstItem="Go8-Im-GRJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="15" id="6dy-LC-ClA"/>
+                            <constraint firstItem="Zcz-nw-ZVE" firstAttribute="baseline" secondItem="rbM-0D-JOu" secondAttribute="baseline" id="6tN-UJ-7BZ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="mTX-HD-O3z" secondAttribute="trailing" constant="218" id="8bx-T3-JSZ"/>
+                            <constraint firstItem="Zcz-nw-ZVE" firstAttribute="leading" secondItem="rbM-0D-JOu" secondAttribute="trailing" constant="36" id="Dni-Y7-Hrk"/>
                             <constraint firstItem="KcJ-gV-cdF" firstAttribute="leading" secondItem="2w5-hJ-Sn0" secondAttribute="leading" id="J9f-aa-gb9"/>
+                            <constraint firstItem="e5A-eM-dy0" firstAttribute="baseline" secondItem="rbM-0D-JOu" secondAttribute="baseline" id="Jo5-13-Axj"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="mTX-HD-O3z" secondAttribute="bottom" constant="220" id="KMk-a2-kAx"/>
+                            <constraint firstItem="Dea-no-gnA" firstAttribute="top" secondItem="Go8-Im-GRJ" secondAttribute="bottom" constant="18" id="KQm-p0-O8Q"/>
                             <constraint firstAttribute="trailingMargin" secondItem="KcJ-gV-cdF" secondAttribute="trailing" constant="123" id="Kxf-jR-0B0"/>
+                            <constraint firstItem="rbM-0D-JOu" firstAttribute="leading" secondItem="e5A-eM-dy0" secondAttribute="trailing" constant="17" id="Pau-mb-tx3"/>
+                            <constraint firstItem="iY5-fE-FsY" firstAttribute="top" secondItem="Zcz-nw-ZVE" secondAttribute="bottom" constant="3" id="Syn-KI-tMk"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="TIY-Hl-UVO" secondAttribute="bottom" constant="104" id="Tlm-WD-grn"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="2w5-hJ-Sn0" secondAttribute="bottom" constant="8" id="Wbz-tj-hq0"/>
                             <constraint firstItem="TIY-Hl-UVO" firstAttribute="top" secondItem="mTX-HD-O3z" secondAttribute="bottom" constant="95" id="Wfk-y3-Smd"/>
+                            <constraint firstItem="Go8-Im-GRJ" firstAttribute="top" secondItem="CXh-kr-NCh" secondAttribute="bottom" constant="95" id="ZTn-u9-Nbm"/>
                             <constraint firstItem="k71-GB-mT4" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" constant="8" id="ZeY-Xf-Zzd"/>
+                            <constraint firstItem="e5A-eM-dy0" firstAttribute="leading" secondItem="hNY-v8-BmW" secondAttribute="leading" id="a2g-7X-iMi"/>
                             <constraint firstItem="k71-GB-mT4" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="byf-Pg-NMq"/>
+                            <constraint firstItem="e5A-eM-dy0" firstAttribute="leading" secondItem="RK3-lg-AnG" secondAttribute="trailing" constant="1" id="dRV-Oz-aPi"/>
+                            <constraint firstItem="Zcz-nw-ZVE" firstAttribute="trailing" secondItem="iY5-fE-FsY" secondAttribute="trailing" id="ex0-fd-si8"/>
+                            <constraint firstItem="e5A-eM-dy0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="200" id="hde-oN-ouU"/>
                             <constraint firstItem="jqc-XV-sTu" firstAttribute="trailing" secondItem="k71-GB-mT4" secondAttribute="trailing" id="kJ6-mi-lAY"/>
+                            <constraint firstItem="Zcz-nw-ZVE" firstAttribute="leading" secondItem="iY5-fE-FsY" secondAttribute="leading" id="kZR-us-0Dn"/>
                             <constraint firstItem="mTX-HD-O3z" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="288" id="loN-fI-kZm"/>
+                            <constraint firstItem="RK3-lg-AnG" firstAttribute="leading" secondItem="Go8-Im-GRJ" secondAttribute="trailing" constant="8" symbolic="YES" id="nJL-Rc-ULl"/>
+                            <constraint firstItem="Zcz-nw-ZVE" firstAttribute="centerX" secondItem="TIY-Hl-UVO" secondAttribute="centerX" id="oBt-7U-SHx"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="k71-GB-mT4" secondAttribute="bottom" constant="219" id="oE4-B1-WSe"/>
                             <constraint firstItem="2w5-hJ-Sn0" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" constant="8" id="p3o-C8-o8A"/>
                             <constraint firstItem="2w5-hJ-Sn0" firstAttribute="top" secondItem="KcJ-gV-cdF" secondAttribute="bottom" constant="15" id="pA3-7t-6gD"/>
                             <constraint firstItem="2w5-hJ-Sn0" firstAttribute="leading" secondItem="TIY-Hl-UVO" secondAttribute="trailing" constant="93" id="qBJ-W2-WQk"/>
                             <constraint firstItem="TIY-Hl-UVO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="320" id="tw9-EH-RWk"/>
+                            <constraint firstItem="Zcz-nw-ZVE" firstAttribute="centerX" secondItem="YDM-Fg-po2" secondAttribute="centerX" id="v6V-rK-d7u"/>
                             <constraint firstItem="jqc-XV-sTu" firstAttribute="top" secondItem="k71-GB-mT4" secondAttribute="bottom" constant="5" id="wY3-fX-edc"/>
+                            <constraint firstItem="RK3-lg-AnG" firstAttribute="bottom" secondItem="Go8-Im-GRJ" secondAttribute="bottom" id="wZ4-CI-CZv"/>
                             <constraint firstItem="KcJ-gV-cdF" firstAttribute="trailing" secondItem="ZTO-2X-BUC" secondAttribute="trailing" id="x55-Hq-ydP"/>
                             <constraint firstItem="TIY-Hl-UVO" firstAttribute="centerX" secondItem="mTX-HD-O3z" secondAttribute="centerX" id="yRb-lk-zmf"/>
+                            <constraint firstItem="e5A-eM-dy0" firstAttribute="trailing" secondItem="hNY-v8-BmW" secondAttribute="trailing" id="zhF-Bo-p2C"/>
+                            <constraint firstItem="e5A-eM-dy0" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="259" id="zhQ-e5-N72"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
@@ -320,6 +349,8 @@
                     </view>
                     <connections>
                         <outlet property="playerBetLabel" destination="4WL-lv-ipV" id="vVQ-Jy-lP0"/>
+                        <outlet property="playerCard" destination="Go8-Im-GRJ" id="zxA-bv-kYf"/>
+                        <outlet property="playerCardTwo" destination="RK3-lg-AnG" id="l0o-Nd-vIV"/>
                         <outlet property="playerMoneyLabel" destination="JQs-b7-5UJ" id="nBz-PT-G5e"/>
                     </connections>
                 </viewController>
